@@ -2,14 +2,10 @@
 double firstNumber = double.Parse(Console.ReadLine());
 Console.Write("Введите второе число: ");
 double secondNumber = double.Parse(Console.ReadLine());
-if (firstNumber > secondNumber)
+double max = firstNumber;
+double min = secondNumber;
+if (firstNumber < secondNumber)
 {
-    Console.Write($"Число {firstNumber} больше чем число {secondNumber}");
+    max = secondNumber; min = firstNumber;
 }
-else
-    if (firstNumber == secondNumber)
-    {
-        Console.Write($"Число {firstNumber} равно числу {secondNumber}");
-    }
-    else
-        Console.Write($"Число {secondNumber} больше чем число {firstNumber}");
+Console.Write($"Число {max} больше чем число {min}");
